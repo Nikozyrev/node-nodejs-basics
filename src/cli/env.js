@@ -6,6 +6,7 @@ const parseEnv = () => {
 
   if (!rssVars.length) {
     console.log(`No env variables starts with ${prefix}`);
+    return;
   }
 
   const result = rssVars.map(([key, value]) => `${key}=${value}`).join('; ');
